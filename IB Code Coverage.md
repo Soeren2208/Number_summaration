@@ -24,7 +24,7 @@ gemeinsamen Teilers zweier Zahlen, erläutert werden sollen:
 15  } 
 ```
 
-###Anweisungsüberdeckung (Statement Coverage)
+### Anweisungsüberdeckung (Statement Coverage)
 Die Anweisungsüberdeckung fordert, dass jede Anweisung des Quellcodes mindestens einmal ausgeführt wird. In unserem Bespiel heißt das,
 dass jede einfache Anweisung, if-Anweisung und die Schleife ausgeführt werden müssen. Dabei spielt es keine Rolle, dass bestimmte Kanten,
 wie das Überspringen der Verzweigung und der Schleife bei unwahren boolschen Bedingungen, nicht berücksichtigt werden. Im obigen Beispiel
@@ -35,7 +35,7 @@ Die Anweisungsüberdeckung ist ein schwaches Testverfahren, mit dem nur 18% der 
 der niemals ausgeführt wird, wie zum Beispiel den Code einer Verzweigung, der niemals ausgeführt wird, weil die die dafür nötige Bedingung
 niemals eintritt. Als einziges Testverfahren ist sie also nicht hinreichend, in Kombination mit anderen Testverfahren aber durchaus nützlich. 
 
-###Zweigabdeckung (Branch Coverage)
+### Zweigabdeckung (Branch Coverage)
 Bei vollständiger **Zweigabdeckung**  wird jeder Zweig einer Anwendung mindestens einmal durlaufen: z.B. einmal if und einmal else oder einmal
 while und einmal nicht while. In unserem Beispiele reichen dazu zwei Testfälle: ggt(20, 45) sorgt dafür, dass der Zweig der true-Zweig der If-Anweisung 
 sowie der Schleifenkörper ausgeführt werden. ggt(30, 10) führt dazu, dass sowohl die Bedingung der if-Anweisung (10 ist nicht größer als 30) sowie
@@ -67,7 +67,7 @@ kein Durchlauf, genau ein Durchlauf und mehrere Durchläufe. Für unser Beispiel
 5. if-Anweisung wird einmal und die Schleife zweimal durchlaufen (ggt(27, 93)) 
 6. if-Anweisung wird nicht durchlaufen und Schleife zwei Male (ggt(93, 27)). 
 
-###Bedingungsabdeckung (Condition Coverage) 
+### Bedingungsabdeckung (Condition Coverage) 
 Die Bedingungsabdeckung findet dort Anwendung, wo sich Bedingungen in Verzweigungen oder Schleifen aus mehreren Ausdrücken zusammensetzen, 
 wie zum Beispiel `if(a<10 || y>20)`. Die Bedingungsabdeckung erfordert, dass jede Bedingung und Teilbedingung mindestens einmal durchlaufen wird 
 und einmal true und einmal false ist. Da in unserem Beispiel keine komplexe Bedingung vorlommt wird hier auf eine Demostration verzichtet. 
@@ -81,4 +81,5 @@ werden. Tests, bei denen das nötig ist, heißen **White-Box-Tests**.
 
 IntelliJ bietet die Möglichkeit, die Code-Coverage der geschriebenen Tests zu messen. Zur Verfügung stehen dabei die Anweisungs- und die 
 Zweigabdeckung. Die Pfadabdeckung wird nicht unterstützt. Dazu müssen die Tests lediglich mit Coverage laufen gelassen werden. Standardmäßig
-wählt IntelliJ dabei die Anweisungsüberdeckung, die Zweigüberdeckung muss extra eingestellt werden.
+wählt IntelliJ dabei die Anweisungsüberdeckung, die Zweigüberdeckung muss extra eingestellt werden (Klicke wie beim Ausführen der Tests links vom Quellcode auf
+das Ausführen-Symbol, wähle Modify Run Configuration... aus und stelle im Bereich Code Covergae unten im Fenster über Modify Enable Branchcovergae aus) .

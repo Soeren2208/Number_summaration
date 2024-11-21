@@ -9,8 +9,5 @@
         <module name="NumberSummaration" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="NumberSummaration" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
